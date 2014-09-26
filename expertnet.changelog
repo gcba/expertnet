@@ -1,0 +1,9 @@
+7.x-beta1 - 2014 September 26
+=============================
+This is just a first commit. At this state it's functional only with SOLR. Views and data index has not yet been developed for drupal internal system.
+
+
+To-Do
+=====
+* Default theme
+* Internal search system

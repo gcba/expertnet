@@ -1,0 +1,44 @@
+<?php
+/**
+ * @file
+ * Code for the Expertnet Core feature.
+ */
+
+include_once 'expertnet_core.features.inc';
+
+/**
+ * Implementation of hook_ctools_plugin_directory()
+ */
+function expertnet_search_ctools_plugin_directory($module, $plugin) {
+  return 'plugins/' . $plugin;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function expertnet_search_theme() {
+  $path = drupal_get_path('module', 'expertnet_search') . '/templates';
+  return array(
+    'expertnet_main_search' => array(
+      'template' => 'expertnet-main-search',
+      'variables' => array(
+        'options' => array(),
+      ),
+      'path' => drupal_get_path('module', 'expertnet_search') . '/templates',
+    ),
+  );
+}
+
+/**
+ * Adds variables and js to search panes.
+ */
+function expertnet_search_add_js() {
+  drupal_add_js(drupal_get_path('module', 'expertnet_search') . '/js/expertnet_search.js');
+}
+
+/**
+ * Implements hook_preprocess_oa_toolbar_search().
+ */
+function expertnet_search_preprocess_expertnet_main_search(&$vars) {
+  expertnet_search_add_js();
+}
