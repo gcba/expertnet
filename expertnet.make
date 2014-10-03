@@ -33,7 +33,7 @@ projects[uuid][download][type] = git
 projects[uuid][download][branch] = 7.x-1.x
 projects[uuid][patch][1605284] = http://drupal.org/files/1605284-define-types-for-tokens-6.patch
 ; Expertnet
-projects[og][version] = 7.x-2.x
+projects[og][version] = 2.x
 projects[expertnet][type] = "profile"
 projects[expertnet][download][type] = "git"
 projects[expertnet][download][url] = "https://github.com/gcba/expertnet.git"
